@@ -9,15 +9,16 @@ const Formulario = () => {
     const [nombre, actualizarNombre] = useState ("")
     const [puesto, actualizarPuesto] = useState ("")
     const [foto, actualizarFoto] = useState ("")
-
+    const [equipo, actualizarEquipo] = useState("")
 
     const manejarEnvio = (e) => {
         e.preventDefault()
         console.log("Manejar el envio")
         let datosAEnviar = {
-            nombre: nombre,
-            puesto: puesto,
-            foto: foto
+            nombre,
+            puesto,
+            foto,
+            equipo
         }
         console.log(datosAEnviar)
     }
@@ -45,7 +46,7 @@ const Formulario = () => {
                 valor={foto} 
                 actualizarValor={actualizarFoto}
             />
-            <ListaOpciones />
+            <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo}/>
             <Boton texto="Crear"/>
         </form>
     </section>

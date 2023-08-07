@@ -10,10 +10,12 @@ const CampoTexto = (props) => {
 
     return <div className="campo-texto">
         <label>{props.titulo}</label>
-        <input placeholder={placeholderNodificado}
+        <input 
+        placeholder={placeholderNodificado}
         required={props.required} 
         value={props.valor} 
-        onChange={manejarCambio}/>
+        onChange={manejarCambio}
+        />
     </div>
 }
 
